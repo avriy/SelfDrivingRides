@@ -9,7 +9,7 @@ struct Problem {
     let rides: [Ride]
     
     func algo() -> Algorithm {
-        return EmptyAlgo()
+        return RealAlgo(problem: self)
     }
 }
 
@@ -26,19 +26,30 @@ struct Point {
     let y: Int
 }
 
+extension Point {
+    static func distance(_ p1: Point, _ p2: Point) -> Int {
+        return abs(p1.y - p2.y) + abs(p1.x - p2.x)
+    }
+}
+
 struct Ride {
     let start: Point
     let stop: Point
     let time: Range<Int>
+    let index: Int
+    
+    var distance: Int {
+        return abs(stop.y - start.y) + abs(stop.x - start.x)
+    }
 }
 
 extension Ride {
-    init(string: String) {
+    init(string: String, index: Int) {
         let components = string.components(separatedBy: " ").map { Int($0)! }
         let start = Point(x: components[0], y: components[1])
         let stop = Point(x: components[2], y: components[3])
         let range = Range(components[4]...components[5])
-        self = Ride(start: start, stop: stop, time: range)
+        self = Ride(start: start, stop: stop, time: range, index: index)
     }
 }
 
@@ -48,7 +59,7 @@ func parse(input: String) -> Problem {
         fatalError()
     }
     let fsi = first.components(separatedBy: " ").map { Int($0)! }
-    let rides = components.dropFirst().map(Ride.init(string:))
+    let rides = components.dropFirst().enumerated().map { Ride(string: $1, index: $0) }
     return Problem(rows: fsi[0], columns: fsi[1], fleetSize: fsi[2], bonus: fsi[3], numberOfSteps: fsi[3], rides: rides)
 }
 

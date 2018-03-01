@@ -16,7 +16,7 @@
             "en",
          );
          mainGroup = "OBJ_5";
-         productRefGroup = "OBJ_11";
+         productRefGroup = "OBJ_12";
          projectDirPath = ".";
          targets = (
             "SelfDrivingRides::SelfDrivingRides",
@@ -24,6 +24,11 @@
          );
       };
       "OBJ_10" = {
+         isa = "PBXFileReference";
+         path = "main.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_11" = {
          isa = "PBXGroup";
          children = (
          );
@@ -31,7 +36,7 @@
          path = "";
          sourceTree = "SOURCE_ROOT";
       };
-      "OBJ_11" = {
+      "OBJ_12" = {
          isa = "PBXGroup";
          children = (
             "SelfDrivingRides::SelfDrivingRides::Product",
@@ -40,43 +45,14 @@
          path = "";
          sourceTree = "BUILT_PRODUCTS_DIR";
       };
-      "OBJ_14" = {
+      "OBJ_15" = {
          isa = "XCConfigurationList";
          buildConfigurations = (
-            "OBJ_15",
             "OBJ_16",
+            "OBJ_17",
          );
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
-      };
-      "OBJ_15" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks",
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)",
-            );
-            INFOPLIST_FILE = "SelfDrivingRides.xcodeproj/SelfDrivingRides_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-               "@executable_path",
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)",
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)",
-            );
-            SWIFT_FORCE_DYNAMIC_LINK_STDLIB = "YES";
-            SWIFT_FORCE_STATIC_LINK_STDLIB = "NO";
-            SWIFT_VERSION = "4.0";
-            TARGET_NAME = "SelfDrivingRides";
-         };
-         name = "Debug";
       };
       "OBJ_16" = {
          isa = "XCBuildConfiguration";
@@ -105,22 +81,47 @@
             SWIFT_VERSION = "4.0";
             TARGET_NAME = "SelfDrivingRides";
          };
-         name = "Release";
+         name = "Debug";
       };
       "OBJ_17" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_18",
-         );
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks",
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+            );
+            INFOPLIST_FILE = "SelfDrivingRides.xcodeproj/SelfDrivingRides_Info.plist";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+               "@executable_path",
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)",
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+            );
+            SWIFT_FORCE_DYNAMIC_LINK_STDLIB = "YES";
+            SWIFT_FORCE_STATIC_LINK_STDLIB = "NO";
+            SWIFT_VERSION = "4.0";
+            TARGET_NAME = "SelfDrivingRides";
+         };
+         name = "Release";
       };
       "OBJ_18" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_9";
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_19",
+            "OBJ_20",
+         );
       };
       "OBJ_19" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-         );
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_9";
       };
       "OBJ_2" = {
          isa = "XCConfigurationList";
@@ -131,16 +132,25 @@
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
       };
+      "OBJ_20" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_10";
+      };
       "OBJ_21" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+         );
+      };
+      "OBJ_23" = {
          isa = "XCConfigurationList";
          buildConfigurations = (
-            "OBJ_22",
-            "OBJ_23",
+            "OBJ_24",
+            "OBJ_25",
          );
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
       };
-      "OBJ_22" = {
+      "OBJ_24" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
             LD = "/usr/bin/true";
@@ -158,7 +168,7 @@
          };
          name = "Debug";
       };
-      "OBJ_23" = {
+      "OBJ_25" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
             LD = "/usr/bin/true";
@@ -176,13 +186,13 @@
          };
          name = "Release";
       };
-      "OBJ_24" = {
+      "OBJ_26" = {
          isa = "PBXSourcesBuildPhase";
          files = (
-            "OBJ_25",
+            "OBJ_27",
          );
       };
-      "OBJ_25" = {
+      "OBJ_27" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_6";
       };
@@ -253,8 +263,8 @@
          children = (
             "OBJ_6",
             "OBJ_7",
-            "OBJ_10",
             "OBJ_11",
+            "OBJ_12",
          );
          path = "";
          sourceTree = "<group>";
@@ -278,6 +288,7 @@
          isa = "PBXGroup";
          children = (
             "OBJ_9",
+            "OBJ_10",
          );
          name = "SelfDrivingRides";
          path = "Sources/SelfDrivingRides";
@@ -285,15 +296,15 @@
       };
       "OBJ_9" = {
          isa = "PBXFileReference";
-         path = "main.swift";
+         path = "City.swift";
          sourceTree = "<group>";
       };
       "SelfDrivingRides::SelfDrivingRides" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_14";
+         buildConfigurationList = "OBJ_15";
          buildPhases = (
-            "OBJ_17",
-            "OBJ_19",
+            "OBJ_18",
+            "OBJ_21",
          );
          dependencies = (
          );
@@ -309,9 +320,9 @@
       };
       "SelfDrivingRides::SwiftPMPackageDescription" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_21";
+         buildConfigurationList = "OBJ_23";
          buildPhases = (
-            "OBJ_24",
+            "OBJ_26",
          );
          dependencies = (
          );
