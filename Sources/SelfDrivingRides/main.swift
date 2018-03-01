@@ -43,7 +43,7 @@ extension Ride {
 }
 
 func parse(input: String) -> Problem {
-    let components = input.components(separatedBy: .newlines)
+    let components = input.components(separatedBy: .newlines).filter { !$0.isEmpty }
     guard let first = components.first else {
         fatalError()
     }
