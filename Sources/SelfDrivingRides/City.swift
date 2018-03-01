@@ -89,14 +89,11 @@ class RealAlgo: Algorithm {
     }
     
     func output() -> String {
-        var result = ""
-        for index in 0..<problem.fleetSize {
+        return Array(0..<problem.fleetSize).map { index in
             let thisCarResult = solveForCar()
-            result += ([index + 1] + thisCarResult).map { $0.description } .joined(separator: " ") + "\n"
-        }
-        return result
+            return ([thisCarResult.count] + thisCarResult).map { $0.description } .joined(separator: " ")
+            }.joined(separator: "\n")
     }
-    
 }
 
 extension Point {
